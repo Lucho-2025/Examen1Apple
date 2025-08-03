@@ -12,4 +12,6 @@ Route::post('/login', [AuthController::class, 'login']);
 
 Route::apiResource('items', ItemController::class)->middleware('auth:sanctum');
 
+Route::apiResource('marcas', MarcaController::class)->middleware('auth:sanctum');
+
 // Route::apiResource('productos', ProductoController::class)->middleware('auth:sanctum');
