@@ -10,6 +10,10 @@ Route::post('/register', [AuthController::class, 'register']);
 
 Route::post('/login', [AuthController::class, 'login']);
 
-Route::apiResource('items', ItemController::class)->middleware('auth:sanctum');
+Route::apiResource('items', ItemController::class);
 
-Route::apiResource('marcas', MarcaController::class)->middleware('auth:sanctum');
+Route::apiResource('marca', MarcaController::class);
+
+//Route::apiResource('items', ItemController::class)->middleware('auth:sanctum');
+
+//Route::apiResource('marcas', MarcaController::class)->middleware('auth:sanctum');
